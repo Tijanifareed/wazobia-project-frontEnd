@@ -1,0 +1,150 @@
+body {
+    background-image: url('../Asserts/sunset.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-wrapper {
+    width: 420px;
+    padding: 30px 40px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: hwb(0 96% 1%);
+}
+
+.login-wrapper h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.login-wrapper .input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: #4d5b00;
+    border: none;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.input input::placeholder {
+    color: #ccc;
+}
+
+.input .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.login-wrapper label {
+    font-weight: bold;
+    color: rgba(0, 0, 01);
+}
+
+
+.login-wrapper .input.email input,
+.login-wrapper .input.password input {
+    font-weight: bold;
+    color: #00ff62;
+}
+
+.rememberForgetPassword {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 20px 0;
+    color: #ccc;
+    gap: 20px;
+}
+
+.rememberForgetPassword label {
+    display: flex;
+    align-items: center;
+}
+
+.rememberForgetPassword label input {
+    accent-color: #0fa057;
+    margin-right: 6px;
+}
+
+.rememberForgetPassword .small-button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.rememberForgetPassword .small-button:hover {
+    color: #555;
+}
+
+.login-wrapper button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+
+.login-wrapper button:hover {
+    background-color: #001f5b;
+    color: #fff;
+}
+
+.register-link {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.register-link .small-button {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.register-link .small-button:hover {
+    color: #555;
+}
