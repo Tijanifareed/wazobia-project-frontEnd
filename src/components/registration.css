@@ -1,0 +1,106 @@
+body{
+    background-image: url("../components/Assets/deh.jpg");
+    /*background-color: coral;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.background{
+    text-align: center;
+}
+
+
+
+.welcome-user{
+    margin-top: 16rem;
+    color: #ED9182;
+    font-family: Inter, sans-serif;
+    font-weight:400;
+    font-size: 4rem;
+    line-height: 16px;
+    margin-left: 3rem;
+}
+
+.sign-up {
+    margin-top: 5rem;
+    align-items: center;
+    padding: 10px 20px; /* Uncomment padding */
+    height: 450px;
+    width: 240px;
+    color: #ED9182;
+
+
+}
+input{
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: #ED9182;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1;
+
+
+}
+input::placeholder{
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+.all{
+    display: flex;
+    gap: 17rem;
+}
+
+.sign-up-message{
+    font-family: Inter, sans-serif;
+}
+.some-details{
+    font-family: Inter, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sign-up-button{
+    width: 15rem;
+    height: 2rem;
+    background-color: #ED9182;
+    color: #695377;
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.sign-up-button:hover{
+    background-color: #695377;
+    color: #ED9182;
+    transform: scale(1.1);
+}
+.another-login{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+select{
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    height: 2rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: #ED9182;
+    font-size: 1rem;
+    font-weight: bold;
+}
