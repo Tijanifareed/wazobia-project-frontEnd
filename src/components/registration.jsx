@@ -1,6 +1,6 @@
 
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './registration.css';
 
 const Registration = () => {
@@ -8,7 +8,7 @@ const Registration = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState(''); // Changed from nextOfKinPhone to phone
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
     const [gender, setGender] = useState('');
     const [nextOfKinName, setNextOfKinName] = useState('');
@@ -16,10 +16,9 @@ const Registration = () => {
 
     // Function to handle form submission
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault();
 
         try {
-            // API call to register the user
             const response = await fetch("http://localhost:8080/passenger/sign-up", {
                 method: 'POST',
                 headers: {
@@ -41,13 +40,12 @@ const Registration = () => {
 
             if (response.ok) {
                 alert('User Created Successfully');
-                // window.location.href = '/login'; // Uncomment to redirect to the login page
             } else {
                 alert('Error: ' + responseData.data);
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('An error occurred: ' + error.message); // Display the error message
+            alert('An error occurred: ' + error.message);
         }
     };
 
@@ -88,10 +86,10 @@ const Registration = () => {
                         required
                     />
                     <input
-                        type="tel" // Use 'tel' for phone number input
+                        type="tel"
                         id="phoneNumber"
                         name="phoneNumber"
-                        placeholder="PhoneNumber"
+                        placeholder="Phone Number"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                         required
@@ -112,7 +110,7 @@ const Registration = () => {
                         onChange={(e) => setGender(e.target.value)}
                         required
                     >
-                        <option value="" disabled>Select your gender </option>
+                        <option value="" disabled>Select your gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
@@ -137,14 +135,15 @@ const Registration = () => {
                         Sign-Up
                     </button>
                 </div>
-                <a href="/login">
+                <Link to="/login">
                     <p>
                         Already Registered? <button className="another-login">Login</button>
                     </p>
-                </a>
+                </Link>
             </form>
         </div>
     );
 };
 
 export default Registration;
+
