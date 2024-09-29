@@ -1,8 +1,8 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { FaLock, FaUser } from "react-icons/fa";
-import "./loginStyle.css";
+import "./loginpage.css";
 
-export const Login = () => {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -27,10 +27,9 @@ export const Login = () => {
 
             if (response.ok) {
                 alert('Login Successful');
-                // You can redirect the user after successful login if necessary
                 // window.location.href = '/dashboard';
             } else {
-                alert('Error: ' + responseData.message);
+                alert('Error: ' + responseData.data);
             }
         } catch (error) {
             console.error('Error:', error);
@@ -40,7 +39,7 @@ export const Login = () => {
     return (
         <div className='login-wrapper'>
             <h1>Login Form</h1>
-            <form action=''>
+            <form className="login" onSubmit={handleSubmit}>
                 <div className="input">
                     <input
                         id="email"
@@ -68,7 +67,7 @@ export const Login = () => {
 
                 <button type='submit'>Login</button>
                 <div className="register-link">
-                    <a href='./registration.jsx'>
+                    <a href='/signin'>
                         <p>
                             Don't have an Account? <button type="button" className='small-button'>Register</button>
                         </p>
